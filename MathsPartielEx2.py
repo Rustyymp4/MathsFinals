@@ -205,9 +205,10 @@ def start():
         plt.scatter(x[i], y[i], color='red')
         if x[i] > x[i+1]:
             C = hermiteModerne(x[i+1], y[i+1], t[i+1], x[i], y[i], t[i])
+            print(len(C[0]))
             for k in range(len(C[0])):
-                abscisses.append(C[0][len(C[0]) - k])
-                ordonnees.append(C[1][len(C[1]) - k])
+                abscisses.append(C[0][len(C[0]) - 1 - k])
+                ordonnees.append(C[1][len(C[1]) - 1 - k])
         
         else:
             C = hermiteModerne(x[i], y[i], t[i], x[i+1], y[i+1], t[i+1])
@@ -219,8 +220,8 @@ def start():
         C = hermiteModerne(x[0], y[0], t[0], x[9], y[9], t[9])
         plt.scatter(x[9], y[9], color='red')
         for k in range(len(C[0])):
-            abscisses.append(C[0][len(C[0]) - k])
-            ordonnees.append(C[1][len(C[1]) - k])
+            abscisses.append(C[0][len(C[0]) - 1 - k])
+            ordonnees.append(C[1][len(C[1]) - 1 - k])
 
     else:
         C = hermiteModerne(x[9], y[9], t[9], x[0], y[0], t[0])
