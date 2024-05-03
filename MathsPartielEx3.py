@@ -53,10 +53,10 @@ for t in times[:-1]:
 
 # trajectoire
 plt.figure(figsize=(10, 5))
-plt.plot(x_positions, y_positions, label='Visibly Curved Trajectory of the Nautilus')
+plt.plot(x_positions, y_positions, label='Trajectoire du Nautilus')
 plt.xlabel('Distance (m)')
-plt.ylabel('Depth (m)')
-plt.title('Visibly Curved Trajectory of the Nautilus')
+plt.ylabel('Profondeur (m)')
+plt.title('Trajectoire du Nautilus')
 plt.legend()
 plt.grid(True)
 plt.show()
